@@ -1,0 +1,122 @@
+{
+    "checklist": [
+        {
+            "step": 1,
+            "title": "Create Azure Account",
+            "tasks": [
+                "Sign up at https://azure.microsoft.com/free/",
+                "Verify email and phone",
+                "Add credit card (₹2 verification only)",
+                "Get ₹13,300 free credit"
+            ],
+            "estimated_time": "10 minutes",
+            "status": "pending"
+        },
+        {
+            "step": 2,
+            "title": "Create Azure Resources",
+            "tasks": [
+                "Create resource group: rg-attorney-sync",
+                "Create storage account: stattorneysync",
+                "Create container: attorneys",
+                "Copy storage connection string",
+                "Create function app: func-attorney-sync"
+            ],
+            "estimated_time": "15 minutes",
+            "status": "pending"
+        },
+        {
+            "step": 3,
+            "title": "Setup App Registration",
+            "tasks": [
+                "Create new app registration",
+                "Copy Application ID",
+                "Copy Directory ID",
+                "Create client secret",
+                "Copy client secret value",
+                "Add API permissions: Sites.Read.All",
+                "Grant admin consent"
+            ],
+            "estimated_time": "10 minutes",
+            "status": "pending"
+        },
+        {
+            "step": 4,
+            "title": "Deploy Function Code",
+            "tasks": [
+                "Install VS Code + Azure Functions extension",
+                "Clone/create project folder",
+                "Add function_app.py, requirements.txt, host.json",
+                "Deploy to Azure via VS Code",
+                "Verify deployment successful"
+            ],
+            "estimated_time": "20 minutes",
+            "status": "pending"
+        },
+        {
+            "step": 5,
+            "title": "Configure Environment Variables",
+            "tasks": [
+                "Go to Function App → Configuration",
+                "Add TENANT_ID",
+                "Add CLIENT_ID",
+                "Add CLIENT_SECRET",
+                "Add SHAREPOINT_SITE",
+                "Add SITE_PATH",
+                "Add LIST_NAME",
+                "Add STORAGE_CONNECTION_STRING",
+                "Add WEBHOOK_CLIENT_STATE",
+                "Save and restart"
+            ],
+            "estimated_time": "10 minutes",
+            "status": "pending"
+        },
+        {
+            "step": 6,
+            "title": "Register SharePoint Webhook",
+            "tasks": [
+                "Install PnP PowerShell",
+                "Get function webhook URL",
+                "Run webhook_registration.ps1",
+                "Verify webhook registered",
+                "Check expiration date"
+            ],
+            "estimated_time": "10 minutes",
+            "status": "pending"
+        },
+        {
+            "step": 7,
+            "title": "Test the Sync",
+            "tasks": [
+                "Test health endpoint",
+                "Test manual sync endpoint",
+                "Update attorney in SharePoint",
+                "Verify webhook triggered (check logs)",
+                "Verify JSON file in blob storage",
+                "Verify JSON content correct"
+            ],
+            "estimated_time": "15 minutes",
+            "status": "pending"
+        },
+        {
+            "step": 8,
+            "title": "Setup Monitoring",
+            "tasks": [
+                "Enable Application Insights (optional)",
+                "Setup cost alerts (₹50 threshold)",
+                "Setup failure alerts",
+                "Bookmark monitoring dashboard",
+                "Document function URLs"
+            ],
+            "estimated_time": "10 minutes",
+            "status": "pending"
+        }
+    ],
+    "total_estimated_time": "100 minutes (1 hour 40 minutes)",
+    "notes": [
+        "All steps are one-time setup",
+        "After setup, system runs automatically",
+        "Total cost: ₹0/month (100% FREE)",
+        "Webhook renewal handled automatically"
+    ]
+}
